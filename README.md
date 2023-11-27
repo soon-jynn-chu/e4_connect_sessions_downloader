@@ -10,7 +10,8 @@ python downloader.py
 
 ### Note
 
-- Might miss a few session, having a longer delay might mitigate this issue
+- Might miss a few sessions, having a longer delay might mitigate this issue
+- Please refrain from interacting with the active browser during the process as it might throw an error
 
 ## Tested Platform
 
