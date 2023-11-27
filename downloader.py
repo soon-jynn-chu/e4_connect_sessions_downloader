@@ -14,10 +14,9 @@ DELAY = 20
 print("Stay tuned while code is running ...")
 
 driver = webdriver.Chrome()
+driver.get(URL)
 
 wait = WebDriverWait(driver, DELAY)
-
-driver.get(URL)
 
 # Enter username and password
 wait.until(EC.element_to_be_clickable((By.ID, "username"))).send_keys(USERNAME)
