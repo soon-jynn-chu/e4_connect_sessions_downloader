@@ -33,9 +33,9 @@ wait.until(EC.element_to_be_clickable((By.XPATH, "/html/body/div[2]/a/button")))
 time.sleep(DELAY)
 elements = driver.find_elements(By.ID, "fileDownloadCustomRichExperience")
 for i in range(len(elements)):
+    print(f"Downloading: ({i + 1}/{len(elements)})")
     wait.until(EC.element_to_be_clickable(elements[i]))
     elements[i].click()
-    print(f"Downloading: ({i}/{len(elements)})")
     time.sleep(DELAY)
     try:
         background_element = driver.find_element(By.ID, "background")
@@ -46,5 +46,5 @@ for i in range(len(elements)):
     except:
         pass
 
-time.sleep(DELAY * 5)
+time.sleep(DELAY * 2)
 driver.quit()
